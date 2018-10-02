@@ -2,13 +2,6 @@
 
 VERSION='20161228010' # Happy new year 2017 !
 
-if [ -f "/etc/samba3.patch.version" ]; then
-	if [ "$(cat /etc/samba3.patch.version)" = "$VERSION" ]; then
-		echo "ERROR: Changes have been applied!"
-		exit 2
-	fi
-fi
-
 # Verifica versao pfSense
 if [ "$(cat /etc/version)" != "2.3.2-RELEASE" ]; then
 	echo "ERROR: You need the pfSense version 2.3.2 to apply this script"
