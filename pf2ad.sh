@@ -2,11 +2,6 @@
 
 VERSION='20180302001' # Welcome to Portugal
 
-if [ -f "/etc/samba.patch.version" ]; then
-	if [ "$(cat /etc/samba.patch.version)" = "$VERSION" ]; then
-		echo "ERROR: Changes have been applied!"
-		exit 2
-	fi
 fi
 
 # Verifica versao pfSense
